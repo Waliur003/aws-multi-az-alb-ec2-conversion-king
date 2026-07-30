@@ -267,9 +267,7 @@ Executed local terminal health checks via SSM, confirming that `conversion-king.
 
 The Target Group console registered both private instances across `us-east-1a` and `us-east-1b` as **Healthy**.
 
-### Automated AWS SNS Notifications for Auto Scaling Lifecycle Events
 
-Displays automated Amazon SNS email notifications triggered by EC2 Auto Scaling when launching worker instances in conversion-king-asg. This confirms real-time event-driven infrastructure telemetry as new compute instances (`i-02ff7711b630d5def` and `i-06eae8ae21f7262cf`) are provisioned across separate Availability Zones (us-east-1a and us-east-1b).
 
 ### Validated Live Public ALB Response
 
@@ -317,6 +315,10 @@ Displays the AWS Target Group console (`conversion-king-tg`) with 2 out of 2 reg
 
 Captures a web browser connecting to the public Application Load Balancer DNS URL and rendering the live Conversion King AI Engine JSON payload. This confirms full end-to-end traffic routing from the public internet down to the private backend compute nodes.
 <img width="1040" height="375" alt="Screenshot 5" src="https://github.com/user-attachments/assets/2754189f-49f2-4750-92d5-f43e34b2b026" />
+
+### 5. Automated AWS SNS Notifications for Auto Scaling Lifecycle Events
+
+Displays automated Amazon SNS email notifications triggered by EC2 Auto Scaling when launching worker instances in conversion-king-asg. This confirms real-time event-driven infrastructure telemetry as new compute instances (`i-02ff7711b630d5def` and `i-06eae8ae21f7262cf`) are provisioned across separate Availability Zones (us-east-1a and us-east-1b).
 
 
 ---
