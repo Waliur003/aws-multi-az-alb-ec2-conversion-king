@@ -62,6 +62,7 @@ Packaged the Flask/Gunicorn application layer into a native Linux `systemctl` se
 
 ## Architecture Diagram
 
+<img width="1663" height="827" alt="Architecture Diagram" src="https://github.com/user-attachments/assets/02e124b6-12ba-4760-9839-6a54ca3a4db1" />
 
 
 ---
