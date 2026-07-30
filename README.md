@@ -267,6 +267,10 @@ Executed local terminal health checks via SSM, confirming that `conversion-king.
 
 The Target Group console registered both private instances across `us-east-1a` and `us-east-1b` as **Healthy**.
 
+### Automated AWS SNS Notifications for Auto Scaling Lifecycle Events
+
+Displays automated Amazon SNS email notifications triggered by EC2 Auto Scaling when launching worker instances in conversion-king-asg. This confirms real-time event-driven infrastructure telemetry as new compute instances (`i-02ff7711b630d5def` and `i-06eae8ae21f7262cf`) are provisioned across separate Availability Zones (us-east-1a and us-east-1b).
+
 ### Validated Live Public ALB Response
 
 Navigated to the public ALB DNS URL and confirmed successful JSON payload delivery:
