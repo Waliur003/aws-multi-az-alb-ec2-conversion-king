@@ -292,6 +292,7 @@ conversion-king-alb-1302602968.us-east-1.elb.amazonaws.com
 ### 1. VPC Private Route Tables with Active NAT Gateway Target
 
 Displays the VPC private route tables configured with a `0.0.0.0/0` destination pointing directly to the active public NAT Gateway interface. This confirms that compute nodes inside private subnets have stateful outbound internet access for package updates while maintaining zero public ingress exposure.
+
 <img width="1715" height="779" alt="Screenshot 1" src="https://github.com/user-attachments/assets/a5c6c54b-5bb6-4448-b170-a65fd2cf3b17" />
 
 <img width="1696" height="778" alt="Screenshot 2" src="https://github.com/user-attachments/assets/616f1664-b080-452b-99ab-ecf6f5dcc97b" />
@@ -302,23 +303,31 @@ Displays the VPC private route tables configured with a `0.0.0.0/0` destination 
 ### 2. AWS Systems Manager (SSM) Active Terminal Session Verification
 
 Shows an active AWS Systems Manager (SSM) terminal session on a private EC2 worker node verifying that `conversion-king.service` is in an active running state. A local `curl` command validates that Gunicorn is listening on Port 80 and returning `HTTP/1.1 200 OK`.
+
 <img width="1439" height="567" alt="Screenshot 3" src="https://github.com/user-attachments/assets/9cd29270-4aa2-41b8-922e-5aab115fe5bf" />
 
 
 ### 3. Target Group Console Displaying 2/2 Healthy Registered Instances
 
 Displays the AWS Target Group console (`conversion-king-tg`) with 2 out of 2 registered EC2 instances returning a green **Healthy** status across both Availability Zones (`us-east-1a` and `us-east-1b`). This verifies that the Application Load Balancer health checks are successfully communicating with the private application servers.
+
 <img width="1386" height="661" alt="Screenshot 4" src="https://github.com/user-attachments/assets/cf6b52ee-e5a3-4389-8d66-d4b7f6754b17" />
 
 
 ### 4. Live Application Load Balancer Public DNS HTTP JSON Response
 
 Captures a web browser connecting to the public Application Load Balancer DNS URL and rendering the live Conversion King AI Engine JSON payload. This confirms full end-to-end traffic routing from the public internet down to the private backend compute nodes.
+
 <img width="1040" height="375" alt="Screenshot 5" src="https://github.com/user-attachments/assets/2754189f-49f2-4750-92d5-f43e34b2b026" />
 
 ### 5. Automated AWS SNS Notifications for Auto Scaling Lifecycle Events
 
 Displays automated Amazon SNS email notifications triggered by EC2 Auto Scaling when launching worker instances in conversion-king-asg. This confirms real-time event-driven infrastructure telemetry as new compute instances (`i-02ff7711b630d5def` and `i-06eae8ae21f7262cf`) are provisioned across separate Availability Zones (us-east-1a and us-east-1b).
+
+<img width="1625" height="616" alt="Screenshot 6" src="https://github.com/user-attachments/assets/3eca647f-1fca-4119-b09f-6b0c3c0afb25" />
+
+<img width="1620" height="500" alt="Screenshot 7" src="https://github.com/user-attachments/assets/14157ea9-992a-40fa-bdcf-1461f0a14977" />
+
 
 
 ---
